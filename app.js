@@ -100,26 +100,19 @@ totalEarned() {
                 if (input.textContent.charAt(0) === "+") {
                     const cleanedValue = input.textContent.replace(/\s/g, '').replace('€', '').replace(',', '.').trim();
                     const totalPlus = parseFloat(cleanedValue);
-                    /*console.log(typeof input.value, input.value);
-                    console.log("totalplus =",typeof totalPlus, totalPlus);*/
                     totalEarned += totalPlus;
-                    //console.log("totalEarned =",totalEarned);
                     const green = document.querySelector(".earned");
                     green.innerText = "GAINS : " + totalEarned.toFixed(2) + " €";
                     
                 } else if (input.textContent.charAt(0) === "-") {
                     const cleanedValue = input.textContent.replace(/\s/g, '').replace('€', '').replace(',', '.').trim();
                     const totalLess = parseFloat(cleanedValue);
-                    /*console.log(typeof input.value, input.value);
-                    console.log("TOTALLESS =",typeof totalLess, totalLess);*/
                     totalSpent += totalLess;
-                   // console.log("TOTALSPENT =",totalSpent);
                     const red = document.querySelector(".spent");
                     red.innerText = "DEPENSES : " + totalSpent.toFixed(2) + " €";
                 }
                 app.count(totalEarned, totalSpent);            
             })
-           // console.log("GAINS =",totalEarned,"DEPENSES =",totalSpent);
     },
 
 count(totalEarned, totalSpent) {
@@ -127,10 +120,6 @@ count(totalEarned, totalSpent) {
     console.log("number ou string ? = ", typeof totalEarned, typeof totalSpent);
     
     const countCalculation = (totalEarned + totalSpent);
-   /* console.log("LES NOMBRES =", totalEarned,totalSpent);
-    console.log("LE CALCUL =",countCalculation);*/
-    
-    
     if (countCalculation >= 0) {
         countZone.innerText = countCalculation.toFixed(2) + " €";
         countZone.style.color = "#00FF7F";
@@ -138,7 +127,6 @@ count(totalEarned, totalSpent) {
         countZone.innerText = countCalculation.toFixed(2) + " €";
         countZone.style.color = "#FF3B30 ";
     }
-
 },
 
 test() {
@@ -168,15 +156,6 @@ searchBar() {
                         element.style.color = "#007461";
                         element.style.fontWeight = "bold";
                     }
-                   //element.innerHTML = element.textContent;
-                   //element.value = test;
-                   
-                   
-                   
-                   //element.style.color = "#00fff7"
-                   //element.style.color = "#00fff7"                    
-                   //console.log("LE I= ",i);
-                   //console.log("TEST =", test);
                 }
                 
                 else if ( search === true ) {
@@ -187,26 +166,12 @@ searchBar() {
                     }
                     
                     const match = inputSearchBar.value;
-                    //const normalizeText = element.innerHTML.toLocaleLowerCase()
-                    console.log("MATCH =",match);
-
                     const regex = new RegExp(match, "gi");
-                    console.log("MATCH REG=", regex);
-
-                    const found = element.textContent.match(regex);
-                    console.log("FOUND=", found);
-                    
+                    const found = element.textContent.match(regex);                    
                     const test = element.innerHTML = orignalText.replace(regex, (match) => {
                         return `<span style='background-color: #00fff7;'>${match}</span>`;
                     });
-                    
                     element.innerHTML = test;
-
-                    
-                    
-                    
-                    console.log("ORIGINALTEXT =",orignalText);
-                    
                 }
                 else {
                     element.textContent = orignalText;
@@ -214,26 +179,13 @@ searchBar() {
                     if (element.textContent.charAt(0) === "+") {
                         element.style.color = "#007461";
                         element.style.fontWeight = "bold";
-                    }
-                    
-                    
+                    }   
                 }
-                
-
-
-                
             });
         }
-
     })
-    
 },
-
 }
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Chargement ok ?");

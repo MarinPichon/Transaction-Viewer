@@ -260,3 +260,68 @@ h4 {
     font-size: 1.8rem;
 }
 
+/*MEDIA QUERIES*/
+
+@media (max-width : 480px) {
+
+    .count-and-search-zone {
+        margin-top: 2rem;;
+        background-color: #f4f9f3;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;;
+    }
+
+    .text-in-divs {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 auto;
+        padding-left: 8rem;
+    }
+
+    header {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ca-logo{
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .count-and-search-zone {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .h2-zone {
+        transform: scale(0.9);
+    }
+
+    .search-zone {
+        transform: scale(0.9);
+    }
+
+    .paste-zone {
+        transform: scale(0.9);
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 auto;
+        padding-left: 8rem;
+    }
+
+    header {
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
