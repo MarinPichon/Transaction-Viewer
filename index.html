@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Application Compte</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header>
+  <img class="ca-logo" src="./Images/Credit-Agricole-logo.png" alt="Logo Crédit Agricole">
+  <h1>Application De Visualisation De Transactions</h1>
+</header>
+
+<section class="choice-section">
+  <p class="text-header">Combien de ligne souhaitez-vous créer ?</p>
+  <input type="number" class="input-header" min="1" max="300" value="0">
+  <button id="oui" type="submit" class="button-header">Valider</button>
+</section>
+
+<section class="count-and-search-zone">
+  <div class="h2-zone">
+    <h2>Zone De Compte</h2>
+<div class="total-zone">
+<div class="total">Totaux :
+  <p class="earned">Gains :</p>
+  <p class="spent">Dépenses :</p>
+  </div>
+  <div class="count">Différence :
+    <p class="count-total">€€€</p>
+  </div>
+</div>
+</div>
+<div class="search-zone">
+  <h3>Barre De Recherche</h3>
+<input type="search" class="search-bar">
+</div>
+<div class="paste-zone">
+  <h4>Barre De Copier-Coller</h4>
+<input type="text" class="input-paste">
+<p class="p-paste-zone">Copier les transactions que vous voulez visualiser, puis coller-les dans la barre.</p>
+</div>
+</section>
+ 
+<section class="container-deal">
+
+    <div class="date table">Date</div>
+    <div class="reason table">Motif</div>
+    <div class="value table">Valeur</div>
+
+</section>
+
+
+
+<script src="/app.js"></script>
+</body>
+</html>
