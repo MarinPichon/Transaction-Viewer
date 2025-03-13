@@ -38,7 +38,6 @@ const app = {
       const choiceValue = inputValue.value;
       app.tableGenerator(choiceValue);
       inputValue.value = 0;
-      console.log("Oui ?");
       app.inputValuesSplit();
     });
   },
@@ -50,7 +49,6 @@ const app = {
       const paste = event.clipboardData.getData("text").trim();
       const pasteArray = paste.split("\n");
       inputPaste.value = pasteArray[0];
-      console.log("pasteArray = ", pasteArray);
 
       // Permet de sélectionner tous les différents inputs crées
       const allInputs = document.querySelectorAll(
@@ -59,31 +57,22 @@ const app = {
       const textInDates = document.querySelectorAll(".text-in-divs");
       const textInAmounts = document.querySelectorAll(".text-in-divs");
       const textInReasons = document.querySelectorAll(".text-in-divs");
-      console.log("allInputs=", allInputs);
 
       let inputIndex = 0;
 
       for (let i = 0; i < pasteArray.length; i += 4) {
         const dates = textInDates[inputIndex];
-        console.log("OUIUUOU =", dates);
         dates.textContent = pasteArray[i];
-        console.log("dates.value=", dates.value);
         const reasons = textInReasons[inputIndex + 1];
         reasons.textContent = pasteArray[i + 1] + " " + pasteArray[i + 2];
-        console.log(pasteArray[i + 1]);
-        console.log(pasteArray[i + 2]);
         const amounts = textInAmounts[inputIndex + 2];
-        console.log("???=", textInAmounts);
 
         amounts.textContent = pasteArray[i + 3];
         if (amounts.textContent.charAt(0) === "+") {
           amounts.style.color = "#007461";
           amounts.style.fontWeight = "bold";
         }
-        console.log("amouts.value=", amounts.value);
-        console.log(pasteArray[i + 3]);
         inputIndex += 3;
-        console.log("Tous les inputs=", allInputs);
       }
       app.totalEarned();
       app.searchBar(pasteArray);
@@ -148,7 +137,6 @@ const app = {
         const allTextArea = document.querySelectorAll(".text-in-divs");
         allTextArea.forEach((element) => {
           const textContents = element.textContent.toLowerCase();
-          console.log("TOUS LES TEXTCONTENTS =", textContents);
 
           const orignalText = element.textContent;
           const search = textContents.includes(
@@ -171,7 +159,6 @@ const app = {
 
             const match = inputSearchBar.value;
             const regex = new RegExp(match, "gi");
-            const found = element.textContent.match(regex);
             const test = (element.innerHTML = orignalText.replace(
               regex,
               (match) => {
@@ -194,7 +181,6 @@ const app = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Chargement ok ?");
   app.validateChoice();
   app.searchBar();
   const resetAtStartSearchBar = document.querySelector(".search-bar");
