@@ -301,16 +301,11 @@ h4 {
         justify-content: space-between;
     }
 
-    .h2-zone {
-        transform: scale(0.9);
-    }
-
-    .search-zone {
-        transform: scale(0.9);
-    }
-
-    .paste-zone {
-        transform: scale(0.9);
+    .h2-zone, .search-zone, .paste-zone {
+        flex: 1 1 30%; /* Permet aux éléments de rétrécir si nécessaire */
+        max-width: 33%; /* Évite qu'un seul élément ne prenne trop de place */
+        transform: scale(0.9); /* Garde ton style tout en réduisant légèrement */
+        box-sizing: border-box; /* Empêche les marges/paddings de dépasser */
     }
 
     h1 {
