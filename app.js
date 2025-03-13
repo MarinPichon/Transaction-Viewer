@@ -122,7 +122,6 @@ const app = {
 
   count(totalEarned, totalSpent) {
     const countZone = document.querySelector(".count-total");
-    console.log("number ou string ? = ", typeof totalEarned, typeof totalSpent);
 
     const countCalculation = totalEarned + totalSpent;
     if (countCalculation >= 0) {
