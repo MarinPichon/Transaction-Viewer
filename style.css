@@ -1,13 +1,14 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -17,34 +18,33 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
   height: 8rem;
   background-color: #308276;
 }
 
 h1 {
-  margin: 0;
   color: aliceblue;
+  flex-grow: 1;
   font-size: 4rem;
   text-decoration: underline;
+  text-align: center;
 }
 
 .ca-logo {
-  position: absolute;
+  background-color: #fff;
   left: 0;
   height: 8rem;
   width: 12rem;
-  background-color: #fff;
 }
 
 .choice-section {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  margin-top: 2rem;
+  justify-content: space-evenly;
   background-color: #f4f9f3;
   height: 7rem;
+  margin-top: 2rem;
 }
 
 .text-header {
@@ -52,24 +52,24 @@ h1 {
 }
 
 .input-header {
-  width: 20rem;
+  border-radius: 25px;
   height: 3rem;
   text-align: center;
-  border-radius: 25px;
+  width: 20rem;
 }
 
 .button-header {
-  width: 15rem;
-  height: 3rem;
-  text-align: center;
   background-color: #308276;
   border-radius: 25px;
+  height: 3rem;
+  text-align: center;
+  width: 15rem;
 }
 
 .count-and-search-zone {
-  margin-top: 2rem;
-  background-color: #f4f9f3;
   display: flex;
+  background-color: #f4f9f3;
+  margin-top: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -83,89 +83,89 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-size: 3rem;
+  text-align: center;
   text-decoration: underline;
 }
 
 .count {
-  color: #fff;
-  display: flex;
   flex-direction: column;
-  width: 20rem;
-  height: 10rem;
-  margin-top: 2rem;
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
   background-color: #308276;
   border-radius: 25px;
+  color: #fff;
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 10rem;
+  margin-top: 2rem;
   text-transform: uppercase;
+  width: 20rem;
 }
 
 .count-total {
-  margin-top: 2rem;
   color: #fff;
+  margin-top: 2rem;
 }
 
 .total {
-  background-color: #308276;
-  color: #fff;
-  width: 25rem;
-  height: 15rem;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 2rem;
+  background-color: #308276;
   border-radius: 25px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 15rem;
+  margin-top: 2rem;
   padding-bottom: 2rem;
+  text-align: center;
   text-transform: uppercase;
+  width: 25rem;
 }
 
 .earned {
-  text-align: start;
   color: #00ff7f;
+  text-align: start;
 }
 
 .spent {
-  text-align: start;
   color: #ff3b30;
+  text-align: start;
 }
 
 .search-zone {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 h3 {
-  text-align: center;
   font-size: 3rem;
+  text-align: center;
   text-decoration: underline;
 }
 
 .search-bar {
-  width: 20rem;
+  border-radius: 25px;
   height: 5rem;
   margin-top: 2rem;
-  border-radius: 25px;
+  width: 20rem;
 }
 
 h4 {
-  text-align: center;
   font-size: 3rem;
+  text-align: center;
   text-decoration: underline;
 }
 
 .paste-zone {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 .p-paste-zone {
@@ -174,10 +174,10 @@ h4 {
 }
 
 .input-paste {
-  width: 20rem;
-  height: 5rem;
   border-radius: 25px;
+  height: 5rem;
   margin-top: 2rem;
+  width: 20rem;
 }
 
 .container-deal {
@@ -192,59 +192,59 @@ h4 {
 
 .date {
   background-color: #308276;
+  border: 1px solid #000;
   color: #fff;
   flex: 1;
   font-size: 2.5rem;
   text-align: center;
-  border: 1px solid #000;
 }
 
 .reason {
   background-color: #308276;
+  border: 1px solid #000;
   color: #fff;
   flex: 1;
   font-size: 2.5rem;
   text-align: center;
-  border: 1px solid #000;
 }
 
 .value {
   background-color: #308276;
+  border: 1px solid #000;
   color: #fff;
   flex: 1;
   font-size: 2.5em;
   text-align: center;
-  border: 1px solid #000;
 }
 
 .text-zones-date {
   display: flex;
-  flex: 1;
-  height: 3rem;
-  border: 1px solid #000;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  border: 1px solid #000;
+  height: 3rem;
+  text-align: center;
 }
 
 .text-zones-reason {
   display: flex;
-  flex: 1;
-  height: 3rem;
-  border: 1px solid #000;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  border: 1px solid #000;
+  height: 3rem;
+  text-align: center;
 }
 
 .text-zones-amount {
   display: flex;
-  flex: 1;
-  height: 3rem;
-  border: 1px solid #000;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  border: 1px solid #000;
+  height: 3rem;
+  text-align: center;
 }
 
 .li-generated {
@@ -259,12 +259,12 @@ h4 {
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .count-and-search-zone {
-    margin-top: 2rem;
-    background-color: #f4f9f3;
     display: flex;
     flex-direction: column;
+    background-color: #f4f9f3;
+    margin-top: 2rem;
     padding-bottom: 2rem;
   }
 
@@ -274,18 +274,15 @@ h4 {
 
   h1 {
     font-size: 2rem;
-    margin: 0 auto;
-    padding-left: 8rem;
   }
 
   header {
-    display: flex;
     justify-content: space-between;
   }
 
   .ca-logo {
     height: 8rem;
-    width: 8rem;
+    width: 10rem;
   }
 }
 
@@ -298,10 +295,10 @@ h4 {
   .h2-zone,
   .search-zone,
   .paste-zone {
-    flex: 1 1 30%; /* Permet aux éléments de rétrécir si nécessaire */
-    max-width: 33%; /* Évite qu'un seul élément ne prenne trop de place */
-    transform: scale(0.9); /* Garde ton style tout en réduisant légèrement */
-    box-sizing: border-box; /* Empêche les marges/paddings de dépasser */
+    box-sizing: border-box;
+    flex: 1 1 30%;
+    max-width: 33%;
+    transform: scale(0.9);
   }
 
   h1 {
@@ -318,16 +315,16 @@ h4 {
   .total,
   .count {
     font-size: 1.8rem;
-    word-wrap: break-word;
     overflow: hidden;
+    word-wrap: break-word;
   }
   .total {
     padding-top: 1rem;
   }
   .count-title {
+    font-size: 1.5rem;
     padding-top: 1rem;
     text-wrap: wrap;
-    font-size: 1.5rem;
   }
 
   .text-in-divs {

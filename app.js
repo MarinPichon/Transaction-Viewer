@@ -46,12 +46,14 @@ const app = {
     const inputPaste = document.querySelector(".input-paste");
     inputPaste.addEventListener("paste", (event) => {
       event.preventDefault();
+      /*.trim() supprime les espaces, tabulations, et retours à la ligne au début
+      et à la fin de la chaîne, ici pour la chaîne copiée*/
       const paste = event.clipboardData.getData("text").trim();
+      // Divise la chaîne copiée en un tableau, chaque élément étant une ligne séparée par un "entrer" (\n)
       const pasteArray = paste.split("\n");
       inputPaste.value = pasteArray[0];
 
-      // Permet de sélectionner tous les différents inputs crées
-      const allInputs = document.querySelectorAll(
+      const allTextZones = document.querySelectorAll(
         ".text-zones-date, .text-zones-reason, .text-zones-amount"
       );
       const textInDates = document.querySelectorAll(".text-in-divs");
@@ -122,7 +124,7 @@ const app = {
     }
   },
 
-  test() {
+  highlightPositiveAmount() {
     const textInAmountsAreas = document.querySelectorAll(".text-in-divs");
     if (textInAmountsAreas.textContent.charAt(0) === "+") {
       textInAmountsAreas.style.color = "#007461";
