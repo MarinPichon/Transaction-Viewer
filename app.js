@@ -46,10 +46,10 @@ const app = {
     const inputPaste = document.querySelector(".input-paste");
     inputPaste.addEventListener("paste", (event) => {
       event.preventDefault();
-      /*.trim() supprime les espaces, tabulations, et retours à la ligne au début
-      et à la fin de la chaîne, ici pour la chaîne copiée*/
+      /*.trim() removes spaces, tabs, and line breaks at the beginning
+      and end of the string, here for the copied text*/
       const paste = event.clipboardData.getData("text").trim();
-      // Divise la chaîne copiée en un tableau, chaque élément étant une ligne séparée par un "entrer" (\n)
+      // Splits the copied string into an array, each element being a line separated by "enter" (\n)
       const pasteArray = paste.split("\n");
       inputPaste.value = pasteArray[0];
 
